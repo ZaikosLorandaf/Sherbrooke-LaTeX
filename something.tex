@@ -1,0 +1,57 @@
+
+\subsection{Making a Table}
+
+Tables are a scary subject to start with in latex.
+This is mostly because their systax seems strange to an untrained eye.
+Fortunately there are tools to make this step easier.
+Consider visiting \href{https://www.tablesgenerator.com/} {tables generator}.
+
+You will find a breakdown of the syntax below.
+
+
+Here is an exemple of a complex table directly copied from \href{https://www.tablesgenerator.com/} {tables generator}.
+\\
+Note how the site advices the use of some packages in the commented section.
+Good practice would want these packages added in the \textit{document.sty} file but they can also be added at the begining
+of your \textit{main.tex} file. Adding these lines at a wrong location may result in a warning or your
+document failing to compile.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\begin{table}[h!]
+\begin{tabular}{ccc}
+\multicolumn{3}{c}{A Not So Randomly Generated Title} \\ \hline
+\multicolumn{1}{c|}{\textbf{Yeah}} &
+  \multicolumn{1}{c|}{\textbf{Yah}} &
+  \textbf{Yea} \\ \hline
+\multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Lawful Good}}} &
+  \multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Neutral Good}}} &
+  {\color[HTML]{656565} \textit{Chaotic Good}} \\ \hline
+\multicolumn{1}{c|}{\textbf{Yes}} &
+  \multicolumn{1}{c|}{\textbf{Ya}} &
+  \textbf{Yeet} \\ \hline
+\multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Lawful Neutral}}} &
+  \multicolumn{1}{c|}{{\color[HTML]{656565} \textit{True Neutral}}} &
+  {\color[HTML]{656565} \textit{Chaotic Neutral}} \\ \hline
+\multicolumn{1}{c|}{\textbf{Yep}} &
+  \multicolumn{1}{c|}{\textbf{Ye}} &
+  \textbf{Yuh} \\ \hline
+\multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Lawful Evil}}} &
+  \multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Neutral Evil}}} &
+  {\color[HTML]{656565} \textit{Chaotic Evil}}
+\end{tabular}
+\end{table}
+
+
+Here is a simpler table made by hand:
+\begin{table}[h!]
+  \begin{tabular}{c|c|c}
+    item 1 &  item 2 &  item 3 \\ \hline
+    item 1 &  item 2 &  item 3 \\ \hline
+    item 1 &  item 2 &  item 3
+  \end{tabular}
+\end{table}

@@ -1,6 +1,5 @@
 \ProvidesPackage{document}
 
-
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %                                  Packages                                  %
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
@@ -16,21 +15,37 @@
 \RequirePackage{pdfpages}         % Allow to add pdf documents to your latex file
 \RequirePackage{hyperref}         % Allow references and hyperlinks
 
+% Useful packages for engineering students
+\RequirePackage{amsmath}          % Mathematics environments
+\RequirePackage{amssymb}          % Mathematical symbols
+\RequirePackage{siunitx}          % SI Units
+\RequirePackage{cleveref}         % To make eqation reference better
+
 % Allows the creations of appendices
 \RequirePackage[title,toc,titletoc,page]{appendix}
 
+
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%                               Headers/Footers                              %
+%                               Equations/Math                               %
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+% Number equation with section number (ex: First equation in section 3 is 3.1)
+\numberwithin{equation}{section}
+% Use french commas when writing numbers
+\sisetup{locale=FR}
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%                          Hyperlinks management                             %
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 
-%\let\oldhref\href
-%\renewcommand{\href}[2]{\oldhref{#1}{\bfseries#2}}
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\bfseries#2}}
 
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=cyan,
-    filecolor=magenta,
+    linkcolor=black,
+    filecolor=black,
     urlcolor=gray,
     pdfpagemode=FullScreen,
     }
@@ -78,3 +93,27 @@
 \renewcommand{\thefigure}{\thesection-\arabic{figure}}
 \renewcommand{\thetable}{\thesection-\arabic{table}}
 
+\usepackage{csquotes}
+\usepackage[style=numeric,backend=biber,sorting=nty]{biblatex}
+\DeclareNameAlias{author}{family-given}     % Display the Bibliography as: Surename, Name
+\addbibresource{references.bib}
+
+
+% Caption
+\usepackage{capt-of}
+
+% Page layout
+%\pagestyle{fancy}
+\lhead{\suni\hseparator\studyprogram}
+\rhead{\doctitle}
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%                                   Appendix                                 %
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\RequirePackage[title,toc,titletoc,page]{appendix}
+
+\addto\captionsfrench{%
+  \renewcommand\appendixname{Annexe}
+  \renewcommand\appendixpagename{Annexe}
+}

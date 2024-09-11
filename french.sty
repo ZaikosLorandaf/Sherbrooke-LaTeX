@@ -1,0 +1,28 @@
+\ProvidesPackage{french}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%                                  Packages                                  %
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
+\RequirePackage[utf8]{inputenc}   % Sensible text encoding
+\RequirePackage[T1]{fontenc}      % French compatibility
+\RequirePackage[french]{babel}    % French document environment
+\RequirePackage[french]{cleveref} % To make eqation reference better
+
+
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%                              French Table Naming                           %
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+% Sets the "Table - xx" to "Tableau - xx"
+\renewcommand{\frenchtablename}{Tableau}
+\renewcommand{\thetable}{\thesection-\arabic{table}}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%                              French Table Naming                           %
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+% Sets "Appendix" to "Annexe"
+\addto\captionsfrench{
+  \renewcommand\appendixname{Annexe}
+  \renewcommand\appendixpagename{Annexe}
+}

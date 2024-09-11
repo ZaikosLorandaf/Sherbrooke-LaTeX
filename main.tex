@@ -6,43 +6,58 @@
 \usepackage[french]{babel}
 
 % Optional packages and tools (Uncomment to your needs)
-\usepackage{tools/bibliography}
-\usepackage{tools/toolbox}
-\usepackage{tools/engineering}
-\usepackage{tools/french}
+\usepackage{toolbox}
+\usepackage{french}
+
+% Image insertion template:
+%
+% \begin{figure}[t!]
+%     \centering
+%     \includegraphics[width=0.45\textwidth]{/path/to/image.jpg}
+%     \caption{Caption Text}
+%     \label{fig: A Relateble Name}
+% \end{figure}
+
 
 % To add a bibliography, first make sure that your file
 % is named "bibliography.bib" and then uncomment the
 % following line.
-
+%
 %\addbibresource{bibliography.bib}
 
 
 % Uncomment to compile links and references...
+%
 %\nofiles
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%                           Title Page Parameters                            %
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \institution{Université de Sherbrooke}
-\faculty{Faculté de...}
-\department{Département de...}
+\faculty{Faculté de ...}
+\department{Département de ...}
 \title{Titre du document}
 \class{Nom du cour}
 \classnb{ABC123}
 \author{
   \addtolength{\tabcolsep}{-0.4em}
   \begin{tabular}{rcl} % Ajouter des auteurs au besoin
-  Prénom Nom     & -- & CIP \\
-  Prénom2 Nom    & - & CIP \\
+  Prénom1 Nom    & -- & CIP \\
+  Prénom2 Nom    & -- & CIP \\
   \end{tabular}
 }
 \teacher{John Doe}
 \location{Sherbrooke}
 \date{\today}
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%                               Begin Document                               %
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
 \begin{document}
 \maketitle
 \newpage
 \tableofcontents
-\newpage
 
 \section{This is the first section}
 This is some text...
@@ -51,63 +66,16 @@ This is some text...
 This is some more text!
 
 
-\section{Here are Some Exemples}
+\subsubsection{You probably guessed whthat this is a subsubsection}
 
-\subsection{Making a Table}
-
-Tables are a scary subject to start with in latex.
-This is mostly because their systax seems strange to an untrained eye.
-Fortunately there are tools to make this step easier.
-Consider visiting \href{https://www.tablesgenerator.com/} {tables generator}.
-
-
-Here is an exemple of a complex table directly copied from \href{https://www.tablesgenerator.com/} {tables generator}.
-\\
-Note how the site advices the use of some packages in the commented section.
-Good practice would want these packages added in the \textit{document.sty} file but they can also be added at the begining
-of your \textit{main.tex} file. Adding these lines at a wrong location may result in a warning or your
-document failing to compile.
-
-
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
-% \usepackage[normalem]{ulem}
-% \useunder{\uline}{\ul}{}
 \begin{table}[h!]
-\begin{tabular}{ccc}
-\multicolumn{3}{c}{A Not So Randomly Generated Title} \\ \hline
-\multicolumn{1}{c|}{\textbf{Yeah}} &
-  \multicolumn{1}{c|}{\textbf{Yah}} &
-  \textbf{Yea} \\ \hline
-\multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Lawful Good}}} &
-  \multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Neutral Good}}} &
-  {\color[HTML]{656565} \textit{Chaotic Good}} \\ \hline
-\multicolumn{1}{c|}{\textbf{Yes}} &
-  \multicolumn{1}{c|}{\textbf{Ya}} &
-  \textbf{Yeet} \\ \hline
-\multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Lawful Neutral}}} &
-  \multicolumn{1}{c|}{{\color[HTML]{656565} \textit{True Neutral}}} &
-  {\color[HTML]{656565} \textit{Chaotic Neutral}} \\ \hline
-\multicolumn{1}{c|}{\textbf{Yep}} &
-  \multicolumn{1}{c|}{\textbf{Ye}} &
-  \textbf{Yuh} \\ \hline
-\multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Lawful Evil}}} &
-  \multicolumn{1}{c|}{{\color[HTML]{656565} \textit{Neutral Evil}}} &
-  {\color[HTML]{656565} \textit{Chaotic Evil}}
-\end{tabular}
+  \begin{tabular}{c c c}
+    \hline
+    item 1 &  item 2 &  item 3 \\ \hline \hline
+    item 1 &  item 2 &  item 3 \\
+    item 1 &  item 2 &  item 3 \\
+  \end{tabular}
 \end{table}
-
-
-% How to insert an image:
-
-% \begin{figure}[t!]
-%     \centering
-%     \includegraphics[width=0.45\textwidth]{/path/to/image.jpg}
-%     \caption{Caption Text}
-%     \label{fig: A Relateble Name}
-% \end{figure}
-
 
 % \newpage
 % \printbibliography[heading=bibintoc]
